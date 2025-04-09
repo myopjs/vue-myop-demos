@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "@myop/sdk" : "^0.1.17",
+    "@myop/vue" : "^0.0.7"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
