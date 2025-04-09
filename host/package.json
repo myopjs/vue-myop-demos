@@ -11,7 +11,7 @@
   "dependencies": {
     "vue": "^3.5.13",
     "@myop/sdk" : "^0.1.17",
-    "@myop/vue" : "^0.0.7"
+    "@myop/vue" : "file://Users/Hadar/projects/myop/myop-vue-host"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
