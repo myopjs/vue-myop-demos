@@ -12,7 +12,7 @@ const count = ref(0)
 
 
   <div style="display: flex;justify-content: center;">
-    <MyopContainer flow-id="49283058-a787-4fa5-b0d2-516b2e6dc5e3" component-id="8c72d29b-c8a0-41cf-b08f-4acca96c7a16"
+    <MyopContainer flowId="49283058-a787-4fa5-b0d2-516b2e6dc5e3" componentId="8c72d29b-c8a0-41cf-b08f-4acca96c7a16"
                    myName="hadar"/>
   </div>
 
