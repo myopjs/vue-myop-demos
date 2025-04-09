@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { defineProps } from 'vue';
 
 // Define the props with an optional `name` prop
@@ -10,19 +9,17 @@ const props = defineProps({
   },
 });
 
-
 const handleClick = () => {
   alert('Button clicked!');
-}
-
+};
 </script>
 
 <template>
-    <q-btn
-           :label="props.name ? props.name : 'Click Me'"
-           color="primary" @click="handleClick"/>
+  <q-btn
+    :label="props.name ? props.name : 'Click Me'"
+    color="primary"
+    @click="handleClick"
+  />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

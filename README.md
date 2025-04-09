@@ -21,11 +21,12 @@ There are two ways to expose your Vue components to Myop:
 Use the `expose` function to directly expose your Vue component:
 
 ```typescript
-import { AppComponent } from './app/app.component';
+import { App } from './app';
 import { exposeVueComponent } from '@myop/Vue-remote';
 
-exposeVueComponent(AppComponent, 'test-comp-1', async () => {
-  return appConfig;
+exposeVueComponent(App, 'test-comp-1', async (app) => {
+  // do something with the app instance
+  return app;
 }).then();
 ```
 
@@ -65,58 +66,21 @@ Follow these steps to create a Myop WebComponent from your Vue component:
 
 You can integrate Myop components into your Vue application in two ways:
 
-### Option 1: Via Routing
+### Option 1: As a Component in Templates
 
 ```typescript
-// Before
-import { TodoComponent } from './todo.component.ts';
+<script setup lang="ts">
+  import {ref} from 'vue'; <br>
+  import {MyopContainer} from '@myop/vue';
+</script>
 
-{ path: 'todo', component: TodoComponent }
-
-// After
-import { MyopContainerComponent } from '@myop/Vue';
-
-{
-    path: 'todo',
-    data: {
-      componentId: "ca8c0c4f-d26e-40c8-bf32-19eb104ee710",
-      flowId: "1d75e2f9-9a2d-49f1-aeeb-6268921a29fe"
-    },
-    component: MyopContainerComponent
-}
-```
-
-### Option 2: As a Component in Templates
-
-```typescript
-// Before
-import { Component } from '@Vue/core';
-import { RouterOutlet } from '@Vue/router';
-import { TranslocoRootModule } from './transloco-root.module';
-import { TodoComponent } from './todo.component.ts';
-
-@Component({
-  selector: 'app-root',
-  imports: [TodoComponent],
-  template: '<todo-component></todo-component>',
-})
-export class AppComponent {}
-
-// After
-import { Component } from '@Vue/core';
-import { RouterOutlet } from '@Vue/router';
-import { TranslocoRootModule } from './transloco-root.module';
-import { MyopContainerComponent } from '@myop/Vue';
-
-@Component({
-  selector: 'app-root',
-  imports: [MyopContainerComponent],
-  template: `<myop-container
-    flowId="1d75e2f9-9a2d-49f1-aeeb-6268921a29fe"
-    componentId="4df90a03-553c-44a3-b153-d0ddccdc0010"
-  />`,
-})
-export class AppComponent {}
+<template>
+  <MyopContainer
+      flowId="{flowId from dashboard}"
+      componentId="{componentId from dashboard}
+      name="Demo"
+    />
+</template>
 ```
 
 ## Communication with Vue Components

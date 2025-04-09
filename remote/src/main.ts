@@ -1,7 +1,7 @@
 //import {createApp} from 'vue'
-import './style.css'
-import App from './App.vue'
-import {QBtn, Quasar} from 'quasar'
+import './style.css';
+import App from './App.vue';
+import { QBtn, Quasar } from 'quasar';
 //import 'quasar/dist/quasar.css'
 
 // // Create Vue app and use Quasar
@@ -31,12 +31,12 @@ exposeVueComponent(Component1, 'component-1', async (app) => {
 }).then();
 
 exposeVueComponent(App, 'vue-quasar-button-dev', async (app) => {
-    await import('./style.css');
-    await import('quasar/dist/quasar.css')
+  await import('./style.css');
+  await import('quasar/dist/quasar.css');
 
-    app.use(Quasar, {
-        components: {
-            QBtn
-        }
-    });
+  app.use(Quasar, {
+    components: {
+      QBtn,
+    },
+  });
 }).then();
