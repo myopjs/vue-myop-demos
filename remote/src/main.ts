@@ -17,6 +17,18 @@ import {QBtn, Quasar} from 'quasar'
 // app.mount('#app')
 
 import {exposeVueComponent} from '@myop/vue-remote';
+import Component1 from "./components/Component1.vue";
+
+exposeVueComponent(Component1, 'component-1', async (app) => {
+    // await import('./style.css');
+    // await import('quasar/dist/quasar.css')
+    //
+    // app.use(Quasar, {
+    //     components: {
+    //         QBtn
+    //     }
+    // });
+}).then();
 
 exposeVueComponent(App, 'vue-quasar-button-dev', async (app) => {
     await import('./style.css');

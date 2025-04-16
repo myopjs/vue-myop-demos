@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   server: {
+    port : 4900,
     cors: {
       origin: '*', // Allow requests only from this origin
       methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
