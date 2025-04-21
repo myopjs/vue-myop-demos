@@ -1,31 +1,26 @@
 <script setup lang="ts">
-
-import {defineProps, ref} from "vue";
+import { defineProps, ref } from 'vue';
 
 defineProps({
   msg1: String,
   name: String,
-  count: Number
-})
+  count: Number,
+});
 
-const model = defineModel()
+const model = defineModel();
 const localCount = ref(0);
 
-const update = () =>{
+const update = () => {
   //@ts-ignore
-  model.value++
-}
+  model.value++;
+};
 
-const localUpdate = () =>{
+const localUpdate = () => {
   localCount.value++;
-}
-
-
-
+};
 </script>
 
 <template>
-
   <div class="wrapper">Im Component 1 - name : {{ name }}</div>
 
   <div>Parent bound v-model is: {{ model }}</div>
@@ -34,7 +29,6 @@ const localUpdate = () =>{
 
   <button @click="localUpdate">Increment Local</button>
   <div>{{ localCount }}</div>
-
 </template>
 
 <style scoped>

@@ -11,7 +11,7 @@
   "dependencies": {
     "vue": "^3.5.13",
     "@myop/sdk": "^0.1.17",
-    "@myop/vue-remote": "^0.0.3",
+    "@myop/vue-remote": "file://Users/yoavganbar/code/myop/myop/myop-vue-remote",
     "quasar": "^2.18.1"
   },
   "devDependencies": {

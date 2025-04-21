@@ -12,8 +12,11 @@ importers:
         specifier: ^0.1.17
         version: 0.1.17
       '@myop/vue':
-        specifier: ^0.0.7
-        version: 0.0.7(typescript@5.7.3)
+        specifier: ^0.0.10
+        version: 0.0.10(vue@3.5.13(typescript@5.7.3))
+      '@myop/vue-host':
+        specifier: file://Users/yoavganbar/code/myop/myop/myop-vue-host/
+        version: '@myop/vue@file:../../myop/myop-vue-host(vue@3.5.13(typescript@5.7.3))'
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.3)
@@ -209,8 +212,15 @@ packages:
   '@myop/sdk@0.1.17':
     resolution: {integrity: sha512-uNZaPwegG1SoBQwKlHZhX15I+5gAHPAX8ODd40yEFwzpxO5OOqucyinMLjpnpscE5tYqOBTPg9jtuvcLN+PtKA==}
 
-  '@myop/vue@0.0.7':
-    resolution: {integrity: sha512-WHQR4x07O6DN3bfYeyh6euggnE7Kd4K/ebcnngNKHopDf6BmR15+6vRZbZpbW7PbXZSoem9UeMgZ6WMwPbgtmg==}
+  '@myop/vue@0.0.10':
+    resolution: {integrity: sha512-fgxk1B+JJZw1iLgaXK6aK7kF08TXpCiGfY5Ezcr2GAo+lKG2+g2GsFJ8ksXzOduIbV77mQEPhMxvetmnUjhXoQ==}
+    peerDependencies:
+      vue: ^3.5.13
+
+  '@myop/vue@file:../../myop/myop-vue-host':
+    resolution: {directory: ../../myop/myop-vue-host, type: directory}
+    peerDependencies:
+      vue: ^3.5.13
 
   '@rollup/rollup-android-arm-eabi@4.39.0':
     resolution: {integrity: sha512-lGVys55Qb00Wvh8DMAocp5kIcaNzEFTmGhfFd88LfaogYTRKrdxgtlO5H6S49v2Nd8R2C6wLOal0qv6/kCkOwA==}
@@ -608,12 +618,15 @@ snapshots:
 
   '@myop/sdk@0.1.17': {}
 
-  '@myop/vue@0.0.7(typescript@5.7.3)':
+  '@myop/vue@0.0.10(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@myop/sdk': 0.1.17
       vue: 3.5.13(typescript@5.7.3)
-    transitivePeerDependencies:
-      - typescript
+
+  '@myop/vue@file:../../myop/myop-vue-host(vue@3.5.13(typescript@5.7.3))':
+    dependencies:
+      '@myop/sdk': 0.1.17
+      vue: 3.5.13(typescript@5.7.3)
 
   '@rollup/rollup-android-arm-eabi@4.39.0':
     optional: true

@@ -12,8 +12,8 @@ importers:
         specifier: ^0.1.17
         version: 0.1.17
       '@myop/vue-remote':
-        specifier: ^0.0.2
-        version: 0.0.2(@myop/sdk@0.1.17)(vue@3.5.13(typescript@5.7.3))
+        specifier: file://Users/yoavganbar/code/myop/myop/myop-vue-remote
+        version: file:../../myop/myop-vue-remote(@myop/sdk@0.1.17)(vue@3.5.13(typescript@5.7.3))
       quasar:
         specifier: ^2.18.1
         version: 2.18.1
@@ -212,8 +212,8 @@ packages:
   '@myop/sdk@0.1.17':
     resolution: {integrity: sha512-uNZaPwegG1SoBQwKlHZhX15I+5gAHPAX8ODd40yEFwzpxO5OOqucyinMLjpnpscE5tYqOBTPg9jtuvcLN+PtKA==}
 
-  '@myop/vue-remote@0.0.2':
-    resolution: {integrity: sha512-8yn3uo5aT0Sh6tIHVUFRMDTBs92pesrMHi3Ax1534pglK7nElfgXByzwy08En3IuMOJgyzrgepgIuqF62cQ+/w==}
+  '@myop/vue-remote@file:../../myop/myop-vue-remote':
+    resolution: {directory: ../../myop/myop-vue-remote, type: directory}
     peerDependencies:
       '@myop/sdk': ^0.1.17
       vue: ^3.2.0
@@ -618,7 +618,7 @@ snapshots:
 
   '@myop/sdk@0.1.17': {}
 
-  '@myop/vue-remote@0.0.2(@myop/sdk@0.1.17)(vue@3.5.13(typescript@5.7.3))':
+  '@myop/vue-remote@file:../../myop/myop-vue-remote(@myop/sdk@0.1.17)(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@myop/sdk': 0.1.17
       vue: 3.5.13(typescript@5.7.3)
