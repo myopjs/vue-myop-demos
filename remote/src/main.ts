@@ -18,18 +18,19 @@ import PropFunc from './components/PropFunc.vue';
 //
 // app.mount('#app')
 
-await exposeVueComponent(Component1, 'component-1', async (app) => {
-  // await import('./style.css');
-  // await import('quasar/dist/quasar.css')
-  //
-  // app.use(Quasar, {
-  //     components: {
-  //         QBtn
-  //     }
-  // });
-});
+exposeVueComponent(Component1, 'component-1').then();
+// , async (app) => {
+// await import('./style.css');
+// await import('quasar/dist/quasar.css')
+//
+// app.use(Quasar, {
+//     components: {
+//         QBtn
+//     }
+// });
+// });
 
-await exposeVueComponent(App, 'vue-quasar-button-dev', async (app) => {
+exposeVueComponent(App, 'vue-quasar-button-dev', async (app) => {
   await import('./style.css');
   await import('quasar/dist/quasar.css');
 
@@ -38,6 +39,9 @@ await exposeVueComponent(App, 'vue-quasar-button-dev', async (app) => {
       QBtn,
     },
   });
-});
+}).then();
 
-await exposeVueComponent(PropFunc, 'prop-func', async (app) => {});
+exposeVueComponent(PropFunc, 'prop-func', async (app) => {
+  debugger;
+  console.log('APP CONFIG =========>', app);
+}).then();

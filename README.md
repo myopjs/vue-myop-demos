@@ -64,9 +64,9 @@ Follow these steps to create a Myop WebComponent from your Vue component:
 
 ## Using Myop Components in Vue
 
-You can integrate Myop components into your Vue application in two ways:
+You can integrate Myop components into your Vue application like so:
 
-### Option 1: As a Component in Templates
+### As a Component in Templates
 
 ```typescript
 <script setup lang="ts">
@@ -85,7 +85,7 @@ You can integrate Myop components into your Vue application in two ways:
 
 ## Communication with Vue Components
 
-The `MyopContainer` component accepts `inputs`, which can include a wide variety of data types. This may consist of simple primitive values, complex objects, functions, and even non-serializable objects.
+The `MyopContainer` component accepts any `props` that are passed down to the component, which can include a wide variety of data types. This may consist of simple primitive values, complex objects, functions, and even non-serializable objects.
 
 The `MyopContainer` component also provides a `componentReady` event that you can use to communicate with your Vue component.
 
@@ -93,31 +93,9 @@ The `MyopContainer` component also provides a `componentReady` event that you ca
 <myop-container
   flowId="1d75e2f9-9a2d-49f1-aeeb-6268921a29fe"
   componentId="4df90a03-553c-44a3-b153-d0ddccdc0010"
-  [inputs]="someObject"
-  (componentReady)="onReady($event)"
+  myProp="someObject"
+  componentReady="onReady($event)"
 />
-```
-
-In your component class
-
-```typescript
-
-someObject = {
-   key1: '123',
-   key2: '456',
-   someInputValue : 'testValue',
-   fun1 : ()=>{
-      alert('ffff')
-   }
-}
-
-onReady(component: IMyopComponent) {
-    // Send messages to the component
-    component.send(ChangeTextMessage.create(component.refs.title, this.inputs.name));
-
-    // Show the component
-    component.show();
-}
 ```
 
 ## Additional Resources

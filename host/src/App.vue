@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 import Hosted from './components/Hosted.vue';
+
 </script>
 
 <template>
@@ -17,7 +18,7 @@ import Hosted from './components/Hosted.vue';
     </a>
   </div>
   <Hosted />
-  <HelloWorld msg="Vite + Vue + Myop" />
+  <!-- <HelloWorld msg="Vite + Vue + Myop" /> -->
 </template>
 
 <style scoped>
