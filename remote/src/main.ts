@@ -1,9 +1,7 @@
-import './style.css';
-import App from './App.vue';
-import { QBtn, Quasar } from 'quasar';
-import { exposeVueComponent } from '@myop/vue-remote';
-import Component1 from './components/Component1.vue';
-import PropFunc from './components/PropFunc.vue';
+//import {createApp} from 'vue'
+import './style.css'
+import App from './App.vue'
+import {QBtn, Quasar} from 'quasar'
 //import 'quasar/dist/quasar.css'
 
 // // Create Vue app and use Quasar
@@ -18,30 +16,22 @@ import PropFunc from './components/PropFunc.vue';
 //
 // app.mount('#app')
 
-exposeVueComponent(Component1, 'component-1').then();
-// , async (app) => {
-// await import('./style.css');
-// await import('quasar/dist/quasar.css')
-//
-// app.use(Quasar, {
-//     components: {
-//         QBtn
-//     }
-// });
-// });
+import {expose} from '@myop/vue-remote';
+import Component1 from "./components/Component1.vue";
+import Component1CE from "./components/Component1.ce.vue";
 
-exposeVueComponent(App, 'vue-quasar-button-dev', async (app) => {
-  await import('./style.css');
-  await import('quasar/dist/quasar.css');
+Component1CE.childComponent = Component1;
 
-  app.use(Quasar, {
-    components: {
-      QBtn,
-    },
-  });
-}).then();
+expose(Component1CE, 'component-1').then();
 
-exposeVueComponent(PropFunc, 'prop-func', async (app) => {
-  debugger;
-  console.log('APP CONFIG =========>', app);
+expose(App, 'vue-quasar-button-dev', async (app) => {
+
+    await import('./style.css');
+    await import('quasar/dist/quasar.css')
+
+    app.use(Quasar, {
+        components: {
+            QBtn
+        }
+    });
 }).then();
