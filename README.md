@@ -22,10 +22,10 @@ Use the `expose` function to directly expose your Vue component:
 
 ```typescript
 import { App } from './app';
-import { exposeVueComponent } from '@myop/Vue-remote';
+import { expose } from '@myop/Vue-remote';
 
-exposeVueComponent(App, 'test-comp-1', async (app) => {
-  // do something with the app instance
+expose(App, 'test-comp-1', async (app) => {
+  // init the app instance, registen, execute use() etc..
   return app;
 }).then();
 ```
