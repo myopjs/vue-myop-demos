@@ -1,4 +1,11 @@
 .component-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component-inner-container {
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -11,11 +18,8 @@
     border: 1px solid #41B883;
     background: white;
     box-shadow: 2px 2px 0 0 rgba(65, 184, 130, 0.40);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50% - 136px), calc(-50% - 136px));
 }
+
 
 .icons-container {
     display: flex;
