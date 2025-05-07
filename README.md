@@ -14,10 +14,6 @@ This guide explains how to integrate your Vue components with Myop, allowing you
 
 ## Exposing Vue Components
 
-There are two ways to expose your Vue components to Myop:
-
-### Direct Exposure
-
 Use the `expose` function to directly expose your Vue component:
 
 ```typescript
