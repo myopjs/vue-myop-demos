@@ -6,11 +6,14 @@ import Component1 from "./components/Component1/Component1.vue";
 import Component1CE from "./components/Component1/Component1.ce.vue";
 import VueDemo from "./components/Demo/VueDemo.vue";
 import VueDemoCE from "./components/Demo/VueDemo.ce.vue";
+import VueDemo2CE from './components/Demo2/VueDemo.ce.vue';
 
 Component1CE.childComponent = Component1;
 VueDemoCE.childComponent = VueDemo
 
 expose(VueDemoCE, 'vue-demo').then();
+
+expose(VueDemo2CE, 'vue-demo-2').then();
 
 expose(Component1CE, 'component-1').then();
 
