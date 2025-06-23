@@ -7,8 +7,8 @@
 
 .icons-container {
     position: absolute;
-    top: 24px;
-    left: 330px;
+    top: 25px;
+    left: 333px;
     background-color: #41B883;
     width: 159px;
     height: 156px;
@@ -28,14 +28,18 @@
 }
 
 .icon-container > .icon > svg {
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
 }
 
 .vue-icon {
-    top: -20px;
-    left: 30px;
+    top: -27px;
+    left: 32px;
     transform: rotate(-16.62deg);
+}
+
+.vue-icon .icon {
+    margin-top: 8px;
 }
 
 .myop-icon {
@@ -46,7 +50,7 @@
 
 .component-inner-container {
     width: 325px;
-    height: 280px;
+    height: 270px;
     border-radius: 20px;
     background-color: #34495E;
     padding: 40px 24px;
@@ -65,6 +69,7 @@
     max-width: 283px;
     margin-bottom: 0;
     margin-top: 0;
+    text-align: left;
 }
 
 .subtitle {
@@ -74,13 +79,15 @@
     line-height: 28px;
     letter-spacing: 0px;
     max-width: 264px;
+    text-align: left;
+    margin: 20px 0 0;
 }
 
 .buttons-container {
     display: flex;
     gap: 8px;
-    margin-top: 24px;
     height: 54px;
+    margin-top: 20px;
 }
 
 .btn {

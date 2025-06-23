@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 .component-container {
     width: 100%;
     display: flex;
@@ -14,16 +16,16 @@
     height: 272px;
     justify-content: center;
     gap: 20px;
-    border-radius: 2px;
-    border: 1px solid #41B883;
+    border-radius: 20px;
+    border: 1px solid #3E3D3E;
     background: white;
-    box-shadow: 2px 2px 0 0 rgba(65, 184, 130, 0.40);
+    box-shadow: 0px 4px 4px 0px #00000040;
 }
-
 
 .icons-container {
     display: flex;
     position: relative;
+    margin-top: 27px;
 }
 
 .icon {
@@ -31,23 +33,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 57px;
+    height: 57px;
     gap: 8px;
     flex-shrink: 0;
     aspect-ratio: 1/1;
     border-radius: 800px;
-    border: 1px solid #C4EBD9;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid black;
 }
 
 .vue-icon {
-    margin-top: -25px;
-    margin-right: -25px;
+    margin-top: -27px;
 }
 
 .myop-icon {
     z-index: 1;
+    margin-left: -20px;
 }
 
 .vue-icon svg, .myop-icon svg {
@@ -62,7 +63,6 @@
 .title {
     margin: 0;
     color: #000;
-    font-family: "DM Sans";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -70,13 +70,13 @@
 }
 
 .subtitle {
-    margin: 4px 0 0;
-    color: #000;
-    font-family: "DM Sans";
+    margin: 0;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+    color: #000;
+    letter-spacing: 0.05px;
 }
 
 .buttons-container {
@@ -85,17 +85,17 @@
 }
 
 .btn {
-    padding: 8px 16px;
     border: 1px solid #5A595B;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.2s;
-    box-shadow: -2px 2px 0 0 rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
+    border-radius: 40px;
 }
 
 .btn-outline {
+    padding: 6px 12px;
     background-color: white;
+    color: #0A090A;
 }
 
 .btn-outline:hover {
@@ -103,10 +103,11 @@
 }
 
 .btn-primary {
+    padding: 6px 18px;
     color: white;
-    background-color: #41B882;
+    background-color: #343738;
 }
 
 .btn-primary:hover {
-    background-color: #3aa876;
+    background-color: black;
 }
