@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "vue": "^3.5.13",
-    "@myop/sdk" : "^0.1.21",
-    "@myop/vue-remote" : "^0.0.11",
+    "@myop/sdk": "npm:@myop-dev/sdk@latest",
+    "@myop/vue-remote" : "npm:@myop-dev/vue-remote@latest",
     "quasar": "^2.18.1"
   },
   "devDependencies": {

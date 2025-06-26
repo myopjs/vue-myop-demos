@@ -2,7 +2,7 @@
 
 import VueDemo from './VueDemo.vue';
 import {defineProps, onMounted} from "vue";
-import {connect} from "@myop-temp/vue-remote";
+import {connect} from "@myop/vue-remote";
 
 // when render in none vue environment we need to manually connect Myop SDK
 onMounted(() => {
