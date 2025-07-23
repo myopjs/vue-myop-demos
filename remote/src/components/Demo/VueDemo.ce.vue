@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <template>
-  <VueDemo/>
+  <VueDemo v-bind="$props"/>
 </template>
 
 <style>
