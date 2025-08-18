@@ -36,4 +36,6 @@ Open http://localhost:4900 (or the port shown in your terminal) to view the host
 
 <br/>
 <br/>
-👉 For more details about Myop, see the [Myop documentation](https://docs.myop.dev/).
+
+
+👉 For more details about Myop, check out the [Myop documentation](https://docs.myop.dev/) site.
